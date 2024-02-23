@@ -1,0 +1,12 @@
+#accueil {
+    background-image: url('chemin-vers-votre-image-accueil.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.destination {
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+    height: 300px; /* Ou la hauteur que vous préférez */
+}

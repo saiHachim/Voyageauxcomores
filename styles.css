@@ -1,0 +1,441 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #004d99;
+    color: #ffffff;
+    padding-bottom: 20px; /* Augmentation de l'espacement */
+    padding-top: 20px; /* Augmentation de l'espacement */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre subtile */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+    background-color: #003366;
+}
+
+section {
+    padding: 40px; /* Augmentation de l'espacement */
+    margin: 20px 0;
+    text-align: center; /* Ajout de la propriété text-align: center; pour centrer le contenu */
+    border-radius: 10px; /* Ajout de bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre douce */
+}
+
+/* Accueil section */
+section#accueil {
+    background: url('iamge-IlesVanille.jpeg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px; /* Ajout de bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légèrement plus prononcée */
+}
+
+section#accueil h1 {
+    font-size: 3em; /* Augmentation de la taille de la police */
+    margin-bottom: 20px; /* Espacement inférieur */
+}
+
+section#accueil p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Destination sections */
+section#destination-1 {
+    background: url('iamge-IlesVanille.jpeg') no-repeat center center/cover;
+    height: 300px;
+    border-radius: 10px; /* Ajout de bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légèrement plus prononcée */
+}
+
+section#destination-2 {
+    background: url('al-camar-lodge.jpeg') no-repeat center center/cover;
+    height: 300px;
+    border-radius: 10px; /* Ajout de bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légèrement plus prononcée */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #666; /* Ajout d'une bordure supérieure */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+    }
+
+    section#accueil {
+        height: 300px;
+    }
+
+    /* Vous pouvez ajuster la hauteur des sections de destination ici si nécessaire */
+    section#destination-1, section#destination-2 {
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour centrer les éléments à l'intérieur de chaque section "destination" */
+.destination {
+    text-align: center; /* Pour centrer le texte à l'intérieur */
+}
+
+.destination-list {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Centrage horizontal des éléments */
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+}
+
+.destination-item {
+    margin: 10px; /* Espacement entre les éléments */
+    transition: transform 0.3s ease; /* Ajouter une transition pour un effet de survol plus doux */
+}
+
+.destination-item:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.destination-item img {
+    max-width: 400px; /* Réglez la largeur maximale de l'image */
+    height: auto; /* Pour maintenir le ratio hauteur/largeur */
+    border-radius: 8px; /* Ajouter une bordure arrondie */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre douce */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajout de styles pour les boutons de navigation */
+.navigation-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond légèrement transparente */
+    border: none; /* Suppression de la bordure */
+    padding: 10px; /* Ajout de rembourrage pour une meilleure apparence */
+    border-radius: 50%; /* Rendre les boutons ronds */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour une animation fluide */
+}
+
+.navigation-button:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Légèrement plus clair au survol */
+}
+
+.prev-button {
+    left: 0;
+    transform: translateX(-50%); /* Déplacer le bouton à gauche de 50% de sa largeur */
+}
+
+.next-button {
+    right: 0;
+    transform: translateX(50%); /* Déplacer le bouton à droite de 50% de sa largeur */
+}
+
+/* Style pour la liste des destinations */
+.destination-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px; /* Ajout de rembourrage pour espacer du bord */
+    margin: 0 -10px; /* Retirer la marge négative pour corriger le débordement horizontal */
+}
+
+.destination-item {
+    min-width: calc(100% - 20px); /* Assurez-vous que chaque élément occupe tout l'espace disponible avec le rembourrage */
+    flex-shrink: 0;
+    margin-right: 10px; /* Espace entre les éléments */
+}
+
+/* Ajout d'une ombre pour améliorer le style */
+.destination-item img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre douce */
+    border-radius: 10px; /* Ajout de bordures arrondies */
+    transition: transform 0.3s ease; /* Transition pour une animation fluide au survol */
+}
+
+.destination-item img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour les sections */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Couleur de fond pour toutes les sections */
+    border-radius: 15px; /* Bordures arrondies légèrement plus prononcées */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour une animation fluide */
+}
+
+/* Style pour les titres de section */
+section h2 {
+    font-size: 2.8em; /* Augmentation de la taille de la police */
+    color: #333; /* Couleur du titre */
+    margin-bottom: 30px; /* Espacement inférieur légèrement plus grand */
+}
+
+/* Style pour les paragraphes de section */
+section p {
+    font-size: 1.2em; /* Augmentation de la taille de la police */
+    color: #777; /* Couleur du texte légèrement plus foncée */
+    line-height: 1.8; /* Hauteur de ligne légèrement plus grande */
+    max-width: 900px; /* Largeur maximale légèrement plus grande */
+    margin: auto;
+}
+
+/* Style pour les vidéos */
+section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px; /* Hauteur légèrement plus grande pour la vidéo */
+    border: none; /* Suppression de la bordure */
+    border-radius: 15px; /* Bordures arrondies pour la vidéo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+
+
+/* Style pour les liens dans la section de contact */
+section#contact a {
+    color: #007bff; /* Couleur du lien */
+    text-decoration: none;
+    transition: color 0.3s; /* Transition pour un effet de survol */
+}
+
+section#contact a:hover {
+    color: #0056b3; /* Couleur du lien au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Style pour la galerie d'images */
+
+#galerie {
+    display: flex; /* Utiliser flexbox pour aligner les images horizontalement */
+    flex-wrap: wrap; /* Permettre le retour à la ligne des images si nécessaire */
+    justify-content: center; /* Centrer les images horizontalement */
+
+}
+
+/* Style pour chaque image de la galerie */
+#galerie img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    border-radius: 15px; /* Bordures arrondies plus prononcées */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour la transformation et l'ombre */
+    margin: 10px; /* Espace entre les images */
+    width: 300px; /* Largeur fixe des images */
+    height: auto; /* Hauteur ajustée automatiquement */
+
+
+   
+}
+
+/* Style pour chaque image au survol */
+#galerie img:hover {
+    transform: scale(1.05); /* Zoom sur l'image au survol */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+
+
+
+    
+}
+
+/* Style pour le titre de la galerie */
+#galerie h2 {
+    text-align: center; /* Centrer le texte */
+    font-family: Arial, sans-serif; /* Police de caractères élégante */
+    font-size: 24px; /* Taille de police plus grande */
+    color: #333; /* Couleur de texte légèrement assombrie */
+    text-align: center; /* Centrer le texte */
+
+}
+
+
+
+
+
+
+
+/* Centrer la section avec l'ID "GALERIE" */
+/* Centrer la section avec l'ID "GALERIE" */
+#galerie {
+    text-align: center; /* Centrer le contenu */
+    margin: 0 auto; /* Centrer la section horizontalement */
+    max-width: 800px; /* Largeur maximale de la section */
+}
+
+/* Centrer le titre de la galerie */
+#galerie h2 {
+    font-family: Arial, sans-serif; /* Police de caractères élégante */
+    font-size: 24px; /* Taille de police */
+    color: #333; /* Couleur de texte */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour la section de contact */
+#contact {
+    text-align: center; /* Centrer le contenu */
+    margin: 50px auto; /* Centrer la section horizontalement avec une marge supplémentaire en haut et en bas */
+    max-width: 800px; /* Largeur maximale de la section */
+}
+
+/* Style pour le titre "Contact & Réservations" */
+#contact h2 {
+    font-family: 'Arial Black', Arial, sans-serif; /* Police de caractères élégante et grasse */
+    font-size: 36px; /* Taille de police plus grande */
+    color: #333; /* Couleur de texte */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    margin-bottom: 20px; /* Ajouter une marge en bas */
+}
+
+/* Style pour la description "Contactez-nous pour réserver votre voyage aux Comores..." */
+#contact p {
+    font-family: Arial, sans-serif; /* Police de caractères élégante */
+    font-size: 18px; /* Taille de police */
+    color: #666; /* Couleur de texte */
+    margin-bottom: 30px; /* Ajouter une marge en bas */
+}
+
+/* Style pour l'adresse e-mail */
+#email {
+    font-family: Arial, sans-serif; /* Police de caractères élégante */
+    font-size: 18px; /* Taille de police */
+    color: #333; /* Couleur de texte */
+    margin-bottom: 10px; /* Ajouter une marge en bas */
+}
+
+/* Style pour le numéro de téléphone */
+#telephone {
+    font-family: Arial, sans-serif; /* Police de caractères élégante */
+    font-size: 18px; /* Taille de police */
+    color: #333; /* Couleur de texte */
+}
